@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/inputIDnumber"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="40dp"
+        android:inputType="number"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/inputCourseCode"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="90dp"
+        android:inputType="text"
+        android:textAllCaps="true"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/inputCourseGrade"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:inputType="numberDecimal"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputCourseCode" />
+
+    <Button
+        android:id="@+id/totalMarkButton"
+        android:layout_width="135dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="108dp"
+        android:layout_marginRight="108dp"
+        android:layout_marginTop="16dp"
+        android:text="Show Grade"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputCourseGrade" />
+
+    <TextView
+        android:id="@+id/viewID"
+        android:layout_width="135dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginRight="48dp"
+        android:layout_marginTop="28dp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/totalMarkButton" />
+
+    <TextView
+        android:id="@+id/viewCourseCode"
+        android:layout_width="135dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginRight="48dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewID" />
+
+    <TextView
+        android:id="@+id/viewGrade"
+        android:layout_width="135dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginRight="48dp"
+        android:layout_marginTop="10dp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewCourseCode" />
+
+    <TextView
+        android:id="@+id/viewMark"
+        android:layout_width="135dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginRight="48dp"
+        android:layout_marginTop="10dp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewGrade" />
+
+    <TextView
+        android:id="@+id/label1"
+        android:layout_width="135dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginTop="25dp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toStartOf="@+id/viewID"
+        app:layout_constraintTop_toBottomOf="@+id/totalMarkButton" />
+
+    <TextView
+        android:id="@+id/label2"
+        android:layout_width="135dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginTop="10dp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toStartOf="@+id/viewCourseCode"
+        app:layout_constraintTop_toBottomOf="@+id/label1" />
+
+    <TextView
+        android:id="@+id/label3"
+        android:layout_width="135dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginTop="10dp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toStartOf="@+id/viewGrade"
+        app:layout_constraintTop_toBottomOf="@+id/label2" />
+
+    <TextView
+        android:id="@+id/label4"
+        android:layout_width="135dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginTop="10dp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toStartOf="@+id/viewMark"
+        app:layout_constraintTop_toBottomOf="@+id/label3" />
+
+    <TextView
+        android:id="@+id/textViewID"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="40dp"
+        android:text="Student ID"
+        android:visibility="visible"
+        app:layout_constraintEnd_toStartOf="@+id/inputIDnumber"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewCC"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="90dp"
+        android:text="Course Code"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewGrade"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="140dp"
+        android:text="Total Marks"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:text="Student Grading System"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

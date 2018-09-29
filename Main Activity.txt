@@ -1,0 +1,100 @@
+package com.example.zohaldanishahmadi.studentgradingsystem;
+
+        import android.support.v7.app.AppCompatActivity;
+        import android.os.Bundle;
+        import android.view.View;
+        import android.widget.Button;
+        import android.widget.EditText;
+        import android.widget.TextView;
+
+public class MainActivity extends AppCompatActivity {
+
+    EditText stID = null;
+    EditText cCode = null;
+    EditText grade = null;
+
+    TextView viewID = null;
+    TextView viewCC = null;
+    TextView viewGrade = null;
+    TextView viewMark = null;
+    TextView viewID1 = null;
+    TextView viewCC1 = null;
+    TextView viewGrade1 = null;
+    TextView viewMark1 = null;
+
+    Button MarkButton = null;
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        stID = findViewById(R.id.inputIDnumber);
+        cCode = findViewById(R.id.inputCourseCode);
+        grade = findViewById(R.id.inputCourseGrade);
+
+        viewID = findViewById(R.id.viewID);
+        viewCC = findViewById(R.id.viewCourseCode);
+        viewGrade = findViewById(R.id.viewGrade);
+        viewMark = findViewById(R.id.viewMark);
+        viewID1 = findViewById(R.id.label1);
+        viewCC1 = findViewById(R.id.label2);
+        viewGrade1 = findViewById(R.id.label3);
+        viewMark1 = findViewById(R.id.label4);
+
+        MarkButton = findViewById(R.id.totalMarkButton);
+
+        MarkButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String id = stID.getText().toString();
+                int i = Integer.parseInt(id);
+                String courseC = cCode.getText().toString();
+                String courseG = grade.getText().toString();
+
+                double m = Double.parseDouble(courseG);
+
+
+                if (m <= 100 && m >= 94)
+                    viewMark.setText("A");
+                else if (m <= 93 && m >= 90)
+                    viewMark.setText("A-");
+                else if (m <= 89 && m >= 87)
+                    viewMark.setText("B+");
+                else if (m <= 86 && m >= 84)
+                    viewMark.setText("B");
+                else if (m <= 83 && m >= 80)
+                    viewMark.setText("B-");
+                else if (m <= 79 && m >= 77)
+                    viewMark.setText("C+");
+                else if (m <= 76 && m >= 74)
+                    viewMark.setText("C");
+                else if (m <= 73 && m >= 70)
+                    viewMark.setText("C-");
+                else if (m <= 69 && m >= 67)
+                    viewMark.setText("D+");
+                else if (m <= 66 && m >= 60)
+                    viewMark.setText("D");
+                else if (m <= 59)
+                    viewMark.setText("F");
+                else
+                    viewMark.setText("Entry is out of range!");
+
+
+                viewID.setText(id);
+                viewCC.setText(courseC.toUpperCase());
+                viewGrade.setText(courseG);
+                viewID1.setText("Student ID");
+                viewCC1.setText("Course Code");
+                viewMark1.setText("Total Marks");
+                viewGrade1.setText("Grade");
+
+
+
+            }
+        });
+
+    }
+}
+
